@@ -62,3 +62,8 @@ if (angka != NULL) {
     free(angka) ;
 }
 
+  
+
+         
+    
+ }
