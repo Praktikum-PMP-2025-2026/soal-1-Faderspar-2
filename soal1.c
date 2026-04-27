@@ -42,7 +42,7 @@ if (count>0) {
 
     //Print dulu semuanya
     printf("COUNT %d", count) ;
-    printf(" SORTED") ;
+    printf(" SORTED ") ;
     //sorting buat sorted
     for (int i = 0; i < count ; i++){
         printf("%d ", angka[i]) ;
