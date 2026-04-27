@@ -50,11 +50,11 @@ if (count>0) {
     }
     //Untuk ngatur median (Referensi di laporan)
     if (count %2 != 0) {
-        printf(" MEDIAN %d\n ", angka[count/2]);
+        printf(" MEDIAN %d\n", angka[count/2]);
 
     } else {
         float median = (angka[count / 2 - 1] + angka[count / 2]) / 2.0;
-        printf("MEDIAN %.2f\n", median);
+        printf(" MEDIAN %.2f\n", median);
 
     }
 }
