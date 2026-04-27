@@ -31,6 +31,7 @@
         if (yessir == NULL) {
             if (angka != NULL) {
                 free(angka);
+                return 0;
             }
         }
         angka = yessir ;
