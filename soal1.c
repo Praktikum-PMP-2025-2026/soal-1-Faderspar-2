@@ -42,19 +42,25 @@ if (count>0) {
 
     //Print dulu semuanya
     printf("COUNT %d", count) ;
-    printf(" SORTED") ;
+    printf(" SORTED ") ;
     //sorting buat sorted
     for (int i = 0; i < count ; i++){
         printf("%d ", angka[i]) ;
 
     }
     //Untuk ngatur median (Referensi di laporan)
-    if (count %2 == 1) {
+    if (count %2 != 0) {
         printf(" MEDIAN %d\n ", angka[count]/2);
 
     } else {
-        float genap = (angka[count/2-1] + angka[count/2]/2.0) ;
-        printf(" MEDIAN %.2f \n", genap) ;
+        int mid1 = angka[count/2] - 1;
+        int mid2 = angka [count/2] ;
+        int sum = mid1 + mid2 ;
+        if (sum % 2 == 0) {
+            printf ("%d.00", sum/2) ;
+        } else {
+            printf("%d.50",(sum/2)-1) ;
+        }
 
     }
 }
