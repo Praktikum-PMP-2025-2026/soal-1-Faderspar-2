@@ -24,14 +24,14 @@
     int count = 0 ;
 
     //Baca input biar end di -1
-    while (scanf("%d", &input) != -1) {
+    while (scanf("%d",&input) == 1 && input != -1) {
         count++ ;
         //realloc
         int *yessir = (int*)realloc(angka,count*sizeof(int)) ;
         if (yessir == NULL) {
             if (angka != NULL) {
                 free(angka);
-                return 0;
+                return 0 ;
             }
         }
         angka = yessir ;
