@@ -24,43 +24,45 @@
     int count = 0 ;
 
     //Baca input biar end di -1
-    while (scanf("%d",&input) == 1 && input != -1) {
+    while (input != -1) {
         count++ ;
         //realloc
         int *yessir = (int*)realloc(angka,count*sizeof(int)) ;
         if (yessir == NULL) {
             if (angka != NULL) {
                 free(angka);
-                return 0 ;
+                return 1 ;
             }
         }
         angka = yessir ;
         angka [count-1] = input ;
     }
 if (count>0) {
-    qsort(angka, sizeof(int),count, compare ) ;
+    qsort(angka, count, sizeof(int), compare ) ;
 
     //Print dulu semuanya
     printf("COUNT %d\n", count) ;
     printf("SORTED") ;
     //sorting buat sorted
     for (int i = 0; i < count ; i++){
-        printf("%d", angka[i]) ;
-    
+        printf("%d ", angka[i]) ;
+
     }
     //Untuk ngatur median (Referensi di laporan)
-    if (count %2 == 0) {
-        printf("MEDIAN %d\n", angka[count]/2-1);
+    if (count %2 == 1) {
+        printf("MEDIAN %d\n ", angka[count]/2);
 
     } else {
-        printf("MEDIAN %d\n",angka[count]/2 +angka[count]/2-1) ;
+        float genap = (angka[count/2-1] + angka[count/2]/2.0) ;
+        printf("MEDIAN %.2f \n", genap) ;
 
+    }
 }
 if (angka != NULL) {
     free(angka) ;
 }
 
-}  
+  
 
          
     
