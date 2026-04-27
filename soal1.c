@@ -41,8 +41,8 @@ if (count>0) {
     qsort(angka, count, sizeof(int), compare ) ;
 
     //Print dulu semuanya
-    printf("COUNT %d\n", count) ;
-    printf("SORTED") ;
+    printf("COUNT %d", count) ;
+    printf(" SORTED") ;
     //sorting buat sorted
     for (int i = 0; i < count ; i++){
         printf("%d ", angka[i]) ;
@@ -50,11 +50,11 @@ if (count>0) {
     }
     //Untuk ngatur median (Referensi di laporan)
     if (count %2 == 1) {
-        printf("MEDIAN %d\n ", angka[count]/2);
+        printf(" MEDIAN %d\n ", angka[count]/2);
 
     } else {
         float genap = (angka[count/2-1] + angka[count/2]/2.0) ;
-        printf("MEDIAN %.2f \n", genap) ;
+        printf(" MEDIAN %.2f \n", genap) ;
 
     }
 }
