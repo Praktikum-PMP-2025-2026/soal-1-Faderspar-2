@@ -11,7 +11,7 @@
  #include <stdlib.h>
  #include <math.h>
 
- //Untuk compare (Referensi sama kayak TP)
+ //Untuk qsort (Referensi sama kayak TP)
  int compare(const void *a, const void *b) {
     return (*(int *)a - *(int *)b);  
 }
@@ -35,28 +35,32 @@
         }
         angka = yessir ;
         angka [count-1] = input ;
-    }  
-qsort(angka, sizeof(int),count, compare ) ;
+    }
+if (count>0) {
+    qsort(angka, sizeof(int),count, compare ) ;
 
-//Print dulu semuanya
-printf("COUNT %d\n", count) ;
-printf("SORTED") ;
-//sorting buat sorted
-for (int i = 0; i < count ; i++){
-    printf("%d", angka[i]) ;
+    //Print dulu semuanya
+    printf("COUNT %d\n", count) ;
+    printf("SORTED") ;
+    //sorting buat sorted
+    for (int i = 0; i < count ; i++){
+        printf("%d", angka[i]) ;
     
-}
-//Untuk ngatur median (Referensi di laporan)
-if (count %2 == 0) {
-    printf("MEDIAN %d\n", angka[count]/2-1);
+    }
+    //Untuk ngatur median (Referensi di laporan)
+    if (count %2 == 0) {
+        printf("MEDIAN %d\n", angka[count]/2-1);
 
-} else {
-    printf("MEDIAN %d\n",angka[count]/2 +angka[count]/2-1) ;
+    } else {
+        printf("MEDIAN %d\n",angka[count]/2 +angka[count]/2-1) ;
 
 }
 if (angka != NULL) {
     free(angka) ;
 }
+
+}  
+
          
     
  }
